@@ -5,7 +5,7 @@ def env(key, default = nil)
   v && !v.strip.empty? ? v : default
 end
 
-AUTOMATION_NAME = env("BOT_AUTOMATION_NAME", "Test Weekend Auto-Reply")
+AUTOMATION_NAME = env("BOT_AUTOMATION_NAME", "Weekend Auto-Reply")
 TZ_NAME         = env("BOT_TIMEZONE", "Europe/Moscow")
 DEFAULT_MODE    = env("BOT_DEFAULT_MODE", "weekends") # weekends | on | off
 VERBOSE         = env("BOT_VERBOSE", "1") == "1"

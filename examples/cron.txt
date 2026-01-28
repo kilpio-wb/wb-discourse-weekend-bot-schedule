@@ -1,0 +1,5 @@
+* * * * * /usr/local/sbin/run-bot-schedule
+
+# Every 5 minutes
+*/5 * * * * /usr/local/sbin/run-bot-schedule
+
