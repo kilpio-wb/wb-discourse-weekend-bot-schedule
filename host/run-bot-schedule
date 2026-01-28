@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Логи (опционально)
+LOG_FILE="/var/log/bot_schedule.log"
+
+docker exec -i app bash -lc \
+'su - discourse -c "cd /var/www/discourse && RAILS_ENV=production bundle exec rails runner /shared/bot_schedule/toggle_weekend_auto_reply.rb"' \
+>> "$LOG_FILE" 2>&1
+
